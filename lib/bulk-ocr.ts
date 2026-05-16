@@ -14,7 +14,6 @@ import {
   updateSuggestedName,
   getPendingUris,
 } from '@/lib/rename-db';
-import { scanStorageForPdfs, type ScannedPdf } from '@/lib/pdf-scanner';
 
 const CROP_PERCENT = 0.25;
 
@@ -41,6 +40,17 @@ export type BulkOcrResult = {
 };
 
 export type BulkOcrProgressCallback = (progress: BulkOcrProgress) => void;
+
+export type ScannedPdf = {
+  /** Absolute file URI (file://) */
+  uri: string;
+  /** Display filename, e.g. "invoice.pdf" */
+  name: string;
+  /** Human-readable relative path from storage root, e.g. "Downloads/invoice.pdf" */
+  relativePath: string;
+  /** File size in bytes (may be undefined if unavailable) */
+  size?: number;
+};
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
@@ -72,18 +82,16 @@ async function runOcrAndSuggestName(
 // ─── Main export ──────────────────────────────────────────────────────────────
 
 /**
- * Runs the full bulk OCR pipeline:
- * 1. Initialises the SQLite database.
- * 2. Scans phone storage for PDFs.
- * 3. Inserts newly found PDFs into the DB.
- * 4. Runs OCR on pending PDFs, persists results.
+ * Runs the bulk OCR pipeline on PDFs provided by an external discovery step.
  *
+ * @param pdfs  The PDFs to process (discovered elsewhere).
  * @param mode  'skip-done'      — skips PDFs already processed (default)
  *              'reprocess-all'  — resets all records and re-runs everything
  * @param onProgress  Called on every meaningful state change.
  * @param signal  Optional AbortSignal to cancel mid-run.
  */
 export async function runBulkOcr(
+  pdfs: ScannedPdf[],
   mode: BulkOcrMode = 'skip-done',
   onProgress: BulkOcrProgressCallback = () => {},
   signal?: AbortSignal
@@ -96,29 +104,16 @@ export async function runBulkOcr(
     resetAllToPending();
   }
 
-  // ── 2. Scan storage ─────────────────────────────────────────────────────
-  let foundCount = 0;
-
-  const pdfs = await scanStorageForPdfs((scanned, currentPath) => {
-    foundCount = scanned;
-    onProgress({
-      phase: 'scanning',
-      total: scanned,
-      processed: 0,
-      currentLabel: currentPath.split('/').slice(-2).join('/'),
-    });
-  });
-
   if (signal?.aborted) {
     return { totalFound: pdfs.length, totalProcessed: 0, totalSkipped: 0, totalErrors: 0 };
   }
 
-  // ── 3. Upsert all discovered PDFs into DB ───────────────────────────────
+  // ── 2. Upsert all discovered PDFs into DB ───────────────────────────────
   for (const pdf of pdfs) {
     insertPdfIfAbsent(pdf.uri, pdf.name, pdf.relativePath, pdf.size);
   }
 
-  // ── 4. Determine which URIs still need processing ───────────────────────
+  // ── 3. Determine which URIs still need processing ───────────────────────
   const pendingUris = new Set(getPendingUris());
   const pendingPdfs = pdfs.filter((p) => pendingUris.has(p.uri));
   const skipped = pdfs.length - pendingPdfs.length;
@@ -127,7 +122,7 @@ export async function runBulkOcr(
   let processed = 0;
   let errors = 0;
 
-  // ── 5. OCR loop ─────────────────────────────────────────────────────────
+  // ── 4. OCR loop ─────────────────────────────────────────────────────────
   for (const pdf of pendingPdfs) {
     if (signal?.aborted) {
       break;
