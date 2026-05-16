@@ -1,0 +1,523 @@
+--------- beginning of main
+05-14 15:28:51.813  4884  5561 I PCDR-CellStatisticProcessor[1]: handleExitOneLongCampRegionCell
+05-14 15:28:51.813  1733  1767 E TetherController:  addInterface rmnet_data3->30 succ
+05-14 15:28:51.813  4884  5530 D SmartStrategyCooperateMachine: cell change, switch to idle state
+05-14 15:28:51.813  4884  6738 I SmartDataSwitchGameStrategy: [NoGameState]processMessage:EVENT_SERVICE_STATE_CHANGED
+05-14 15:28:51.813  4567  4567 D Tile.OplusCellularTile: refreshState: tile not listening, ignore
+05-14 15:28:51.813  4884  6738 I SmartDataSwitchGameStrategy: [NoGameState]updateCidWithServiceState update cid for phone:1 from: 2147483647 to: 3223814162 under rat: 20
+05-14 15:28:51.814  4884  5530 D ScoreServiceProxy: registerScoreChanged uid 10201 period 32 threshold 24
+05-14 15:28:51.815  2685  3834 E imsd    : ImsDsiNetCtrlWrapper.cpp | 209 | | 3834 |ImsDsiNetCtrlWrapper : dsiNetCtrlCB - received event[6] for dsi_hndl[5b110ade]
+05-14 15:28:51.815  2685  3834 E imsd    : ImsDsiNetCtrlClient.cpp | 204 | | 3834 |ImsDsiNetCtrlClient : imsEventHandler sending to 8926b008
+05-14 15:28:51.815  2685  2864 E imsd    : ImsMain.cpp | 756 | | 2864 |ImsMain: handleEvent Switched to Ims Main thread [ImsDsiEvent]
+05-14 15:28:51.815 20917 21002 I AIUnit-NetworkPublisher: onNetworkChanged [onCapabilitiesChanged, 167]
+05-14 15:28:51.815  2685  2864 E imsd    : ImsMain.cpp | 839 | | 2864 |ImsMain:Handle Event sName[ImsDsiEvent] eventType[4]
+05-14 15:28:51.815  4990  4990 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onServiceStateChanged
+05-14 15:28:51.815  2685  2864 E imsd    : ImsCommonDef.h | 480 | | 2864 |Current [0x826f42f0], Appid[0]
+05-14 15:28:51.815  2685  2864 E imsd    : ImsCommonDef.h | 481 | | 2864 |Other [0x8581b4a0], Appid[21]
+05-14 15:28:51.815  2685  2864 E imsd    : ImsPdnFactoryImpl.cpp | 287 | | 2864 |ImsPdnFactoryImpl: isPdnExisting 1
+05-14 15:28:51.815  2685  2864 E imsd    : PdnInfoImpl.cpp | 140 | | 2864 |PdnInfoImpl: getPdnType 1 
+05-14 15:28:51.815  2685  2864 E imsd    : ImsMain.cpp | 856 | | 2864 |ImsMain: handleEvent from DSI Module for IMS PDN
+05-14 15:28:51.815  2685  2864 E imsd    : PdnInfoImpl.cpp | 589 | | 2864 |PdnInfoImpl:handleEvent sName[ImsDsiEvent]
+05-14 15:28:51.815  2685  2864 E imsd    : PdnInfoImpl.cpp | 633 | | 2864 |PdnInfoImpl: handleDsiEvents event Id 6 
+05-14 15:28:51.815  4990  4990 D QuickChangeAirplaneModeEvent: onServiceStateChanged slotId:1
+05-14 15:28:51.816  4884  5530 D ScoreServiceProxy: registerScoreChanged uid 10201 period 4 threshold 4
+05-14 15:28:51.816  6163  6276 I midasd  : OplusObrainService::notifyEventInt eventId:38 iParam:20
+05-14 15:28:51.816  4990  4990 D NetworkService[1]: onServiceStateChanged, NetworkType:20
+05-14 15:28:51.816  4990  6746 I ImsGuardUnit[1]: onServiceStateChanged
+05-14 15:28:51.816  4990  4990 E ExtremeCommUtils: getSwitchRusSupportMcc invalid index 2
+05-14 15:28:51.816  4990  6746 I ImsGuardUnit[1]: handleMessage: 4
+05-14 15:28:51.816  4990  4990 D ExtremeCommUtils: isSupporCheck rusContain:false,propContain(persist.sys.oplus.support_fence_check_mcc):false
+05-14 15:28:51.816  4990  6746 D TelephonyManagerProxy: isImsValid soltId: 1
+05-14 15:28:51.816  4990  4990 D ExtremeCommService: handleServiceStateChanged mStartExtremeComm:true,isExpectMcc(isSupportHyperUplink):true(405)
+05-14 15:28:51.817  4990  4990 E ExtremeCommUtils: getSwitchRusSupportMcc invalid index 4
+05-14 15:28:51.817  4990  4990 D ExtremeCommUtils: isSupporCheck rusContain:false,propContain(persist.sys.oplus.support_cloud_data_mcc):false
+05-14 15:28:51.817  4990  4990 E ExtremeCommUtils: getSwitchRusSupportMcc invalid index 3
+05-14 15:28:51.817  4990  4990 D ExtremeCommUtils: isSupporCheck rusContain:false,propContain(persist.sys.oplus.support_in_fence_mcc):false
+05-14 15:28:51.817  8748  8869 I OplusObrain: OplusObrainClientInvoke.nativeGetTelephonyInfo
+05-14 15:28:51.817  4990  4990 D MsimSubModeManager: registTelephonyEvent onServiceStateChanged eventId:4, VoiceRegState:0, DataRegState:0
+05-14 15:28:51.817  4990  4990 D RadioMessenger: handleMessage Request msgid 2341
+05-14 15:28:51.817  4990  4990 D ScorePolicyManager: removeID 11402648 policy 3342341
+05-14 15:28:51.817  4990  4990 D RadioMessenger: handleMessage Request msgid 2340
+05-14 15:28:51.817  8748  8766 I OplusObrain: OplusObrainClientInvoke.nativeGetTrafficTypeInfoForNetworkType networkType 0
+05-14 15:28:51.817  4884  5530 D ScoreServiceProxy: registerScoreChanged uid 10201 period 4 threshold 4
+05-14 15:28:51.818  1852 19695 I oppo_audiox_sw_effects: sweffectFx_algo_Process g_sweffectFx_Process_counter 1719424 frame_count 1920 processedMsk 0x1 [2 4 48000 ] openCloseCrossFadeCfg enable 0, crossFadeCfg enable 0
+05-14 15:28:51.818  1852 19695 I oppo_audiox_sw_effects: sweffectFx_algo_Process session 0x71440c3678 newDeviceID 5 deviceID 1 newServType 8 servType 1 newvolumelevel 0 volumeLevel 1 openCloseFadePath 0 fade_path 0
+05-14 15:28:51.818  4884  5530 D ScoreServiceProxy: registerScoreChanged uid 10201 period 16 threshold 12
+05-14 15:28:51.819  4990  4990 D ScorePolicyManager: ID 11402648 policy 3342341 clinetScoreClient: 11402648 3342341 10201 32 24 32 false 0 81425943 null
+05-14 15:28:51.819  4990  4990 D RadioMessenger: handleMessage Request msgid 2341
+05-14 15:28:51.819  4884  5530 D ScoreServiceProxy: registerScoreChanged uid 10201 period 4 threshold 4
+05-14 15:28:51.819  4990  4990 D ScorePolicyManager: removeID 149518833 policy 3342341
+05-14 15:28:51.819  4990  4990 D MsimSubModeManager: handleMessage what:4
+05-14 15:28:51.819  4990  4990 D MsimSubModeManager: getMsimSimServiceIn() i:0,mServiceState:1
+05-14 15:28:51.819  4990  4990 D MsimSubModeManager: getMsimSimServiceIn() i:1,mServiceState:0
+05-14 15:28:51.819  4990  4990 D RadioMessenger: handleMessage Request msgid 2340
+05-14 15:28:51.820  4884  5530 D SmartStrategyCooperateMachine: rat change,clear score
+05-14 15:28:51.820  4990  4990 D ScorePolicyManager: ID 149518833 policy 3342341 clinetScoreClient: 149518833 3342341 10201 4 4 4 false 0 81425943 null
+05-14 15:28:51.820  4990  4990 D RadioMessenger: handleMessage Request msgid 2311
+05-14 15:28:51.820  4990  4990 D RadioProxyJ[1]: [80229]> getAllCellularCellInfo
+05-14 15:28:51.820  4990  4990 D RadioMessenger: handleMessage Request msgid 2341
+05-14 15:28:51.820  4990  4990 D ScorePolicyManager: removeID 6752010 policy 3342341
+05-14 15:28:51.820  4990  4990 D RadioMessenger: handleMessage Request msgid 2340
+05-14 15:28:51.821  4990  4990 D ScorePolicyManager: ID 6752010 policy 3342341 clinetScoreClient: 6752010 3342341 10201 4 4 4 false 0 81425943 null
+05-14 15:28:51.821  4990  4990 D RadioMessenger: handleMessage Request msgid 2341
+05-14 15:28:51.821  4990  4990 D ScorePolicyManager: removeID 197081979 policy 3342341
+05-14 15:28:51.821  4990  4990 D RadioMessenger: handleMessage Request msgid 2340
+05-14 15:28:51.821  3332  3366 D QmiVsClient: getAllCellularCellInfo - enter
+05-14 15:28:51.821  4990  4990 D ScorePolicyManager: ID 197081979 policy 3342341 clinetScoreClient: 197081979 3342341 10201 16 12 16 false 0 81425943 null
+05-14 15:28:51.821  4990  4990 D RadioMessenger: handleMessage Request msgid 2311
+05-14 15:28:51.821  3332  3366 E QmiVsClient: sendAsyncRequest QMI_VS_GET_ALL_CELLULAR_CELL_INFO_REQ_MSG_V01 ret 0
+05-14 15:28:51.821  4990  4990 D RadioProxyJ[1]: [80230]> getAllCellularCellInfo
+05-14 15:28:51.821  4990  4990 D RadioMessenger: handleMessage Request msgid 2341
+05-14 15:28:51.821  4990  4990 D ScorePolicyManager: removeID 181246837 policy 3342341
+05-14 15:28:51.821  4990  4990 D RadioMessenger: handleMessage Request msgid 2340
+05-14 15:28:51.822  3167  4407 I OplusWifiSarManager: Received service state changed nrstate=3
+05-14 15:28:51.822  4990  4990 D ScorePolicyManager: ID 181246837 policy 3342341 clinetScoreClient: 181246837 3342341 10201 4 4 4 false 0 81425943 null
+05-14 15:28:51.822  3332  3366 D QmiVsClient: getAllCellularCellInfo - enter
+05-14 15:28:51.822  3332  3366 E QmiVsClient: sendAsyncRequest QMI_VS_GET_ALL_CELLULAR_CELL_INFO_REQ_MSG_V01 ret 0
+05-14 15:28:51.822  3332  3787 D QmiVsClient: operator() callback - enter
+05-14 15:28:51.822  3332  3366 D VsProxy : handleMessage msg is 4001
+05-14 15:28:51.822  3332  3366 D RadioProxy: getAllCellularCellInfo : response cb for instance 1
+05-14 15:28:51.823  3332  3787 D QmiVsClient: operator() callback - enter
+05-14 15:28:51.823  3332  3366 D VsProxy : handleMessage msg is 4001
+05-14 15:28:51.823  3332  3366 D RadioProxy: getAllCellularCellInfo : response cb for instance 1
+05-14 15:28:51.824  4990  5848 D SubsysRadioResponse: getAllCellularCellInfoResponse
+05-14 15:28:51.824  4990  5848 D SubsysRadioResponse: responseAllCellularCellInfo len:1
+05-14 15:28:51.824  4990  5848 D RadioProxyJ[1]: [80229]< getAllCellularCellInfoResponse ******
+05-14 15:28:51.824  4990  4990 D MessengerResponseHandler: handleMessage Response msgid 281
+05-14 15:28:51.824  4990  5848 D SubsysRadioResponse: getAllCellularCellInfoResponse
+05-14 15:28:51.824  4990  5848 D SubsysRadioResponse: responseAllCellularCellInfo len:1
+05-14 15:28:51.824  4990  5848 D RadioProxyJ[1]: [80230]< getAllCellularCellInfoResponse ******
+05-14 15:28:51.824  4990  4990 D MessengerResponseHandler: handleMessage Response msgid 281
+05-14 15:28:51.825  4884  5530 D fastrecovery: updateRsrp rsrp = -100
+05-14 15:28:51.825  4884  5530 D fastrecovery: updateRsrp rsrp = -100
+--------- beginning of system
+05-14 15:28:51.826  3167  6894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1331 android.content.Context.sendBroadcastMultiplePermissions:2583 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4199 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1873 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 
+05-14 15:28:51.827  4567  4723 D WifiStatusTracker: mNetworkCallback onCapabilitiesChanged return networkId:155
+05-14 15:28:51.832  3167  6894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1364 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4204 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1873 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1444 
+05-14 15:28:51.833  3167  6894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1364 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4213 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1873 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1444 
+05-14 15:28:51.833  3167  6894 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.sendBroadcastMultiplePermissions:1364 com.android.server.TelephonyRegistry.broadcastServiceStateChanged:4219 com.android.server.TelephonyRegistry.notifyServiceStateForPhoneId:1873 com.android.internal.telephony.ITelephonyRegistry$Stub.onTransact:613 android.os.Binder.execTransactInternal:1444 
+05-14 15:28:51.836  4990  4990 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onCellLocationChanged
+05-14 15:28:51.837  4884  5556 D OplusGame: onCellLocationChanged
+05-14 15:28:51.837  4884  5556 D OplusGame: EVENT_CELL_CHANGE
+05-14 15:28:51.839  3167  3470 D ActivityManager: Cancel freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.839  3167  3470 D ActivityManager: Async freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.840  3167  3470 D ActivityManager: Cancel freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.840  3167  3470 D ActivityManager: Async freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.841  4990  4990 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onDisplayInfoChanged
+05-14 15:28:51.842  4567  4567 D Tile.OplusCellularTile: refreshState: tile not listening, ignore
+05-14 15:28:51.844  4567  4742 I SystemUi--Statusbar: OplusMobileIconInteractorImpl-->oplusIMSModel slot:1: CapabilityTypeModel(isVolteSwitchOn=true, isWfcEnabledByUser=true, imsRegistered=true, voiceCapable=true, videoCapable=true, registerTech=3, isCrossSimCallingEnabledByUser=false, hasHideVolteOperator=false), SimStateModel(simInserted=[false, true], simForbidden=[true, false], simStateIMSI=[false, true], simLoaded=[false, true]),oplusNetworkTypeNr:20,isVoNrEnabled:true
+05-14 15:28:51.844  4567  4767 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:1
+05-14 15:28:51.845  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34376)(cct,lux,ir)[7649.76, 81.41, 59.353207](rgbc)[5024.30, 4193.12, 2859.68, 10819.60](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59591
+05-14 15:28:51.847  4862  6068 D IWlanJni: getDataRegistrationState start
+05-14 15:28:51.848  4862  6087 D IWlanJni: new aidl event arrived
+05-14 15:28:51.848  4862  6087 D IWlanJni: handleEvent 10
+05-14 15:28:51.848  4862  6087 D IWlanJni: isThreadAttached start
+05-14 15:28:51.848  4862  6087 D IWlanJni: jni detached
+05-14 15:28:51.848  4839  4839 D MultiSimSettingController: notifySubscriptionInfoChanged
+05-14 15:28:51.848  4862  6087 D IWlanJni: jni attached
+05-14 15:28:51.848  4862  6087 D IWlanJni: getDataRegistrationStateResponse start
+05-14 15:28:51.848  4862  6087 D IWlanJni: getJavaCallbackClass start
+05-14 15:28:51.848  4862  6087 D IWlanJni: getJavaCallbackClass End midIs[1]
+05-14 15:28:51.848  4862  6087 I IWlanAidlClient: getDataRegistrationStateResponse called
+05-14 15:28:51.848  3167  3470 D ActivityManager: Cancel freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.848  4862  6086 W IWlanNetworkService: 49623 > Response Processed
+05-14 15:28:51.850  3167  4291 V NetworkPolicy: onSubscriptionsChanged
+05-14 15:28:51.853  4567  4567 I KeyguardUpdateMonitor: action=android.intent.action.SERVICE_STATE subId=1 slotId=1
+05-14 15:28:51.853  3167  3440 D GnssNetworkConnectivityHandler: Active Sub List size: 1
+05-14 15:28:51.853  4567  4640 I SystemUi--QuickSettings: Tile.OplusCellularTile-->updateCarrierText: dialog not showing, ignore
+05-14 15:28:51.853  1733  1767 E TetherController:  addInterface rmnet_data4->33 succ
+05-14 15:28:51.854  4567  4640 D SimStateHelper: sts slot:0, lock state:-1
+05-14 15:28:51.854  4567  4767 I SystemUi--Statusbar: MobileInputLog-->onSubscriptionsChanged
+05-14 15:28:51.855  3167  3167 I AS.AudioService: onSubscriptionsChanged()
+05-14 15:28:51.855  4567  4567 I SystemUi--Keyguard: OplusEmergencyButtonExImpl-->updateEmergencyCallButton: isTablet=false isWifiOnly=false isInCall=false visible=true
+05-14 15:28:51.856  4567  4640 D SimStateHelper: sts slot:1, lock state:-1
+05-14 15:28:51.856  4567  4640 D SimStateHelper: needDisableMenu: slot1State=-1; slot2State=-1
+05-14 15:28:51.856  4567  4640 D SimStateHelper: needDisableMenu:false
+05-14 15:28:51.856  4567  4767 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:1
+05-14 15:28:51.857 22129 22129 D CellBroadcastReceiver: onReceive Intent { act=android.intent.action.SERVICE_STATE flg=0x1000010 xflg=0x4 cmp=com.google.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CellBroadcastReceiver (has extras) }
+05-14 15:28:51.857  4567  4739 I SystemUi--Statusbar: OplusMobileIconInteractorImpl-->oplusIMSModel slot:1: CapabilityTypeModel(isVolteSwitchOn=true, isWfcEnabledByUser=true, imsRegistered=true, voiceCapable=true, videoCapable=true, registerTech=3, isCrossSimCallingEnabledByUser=false, hasHideVolteOperator=false), SimStateModel(simInserted=[false, true], simForbidden=[true, false], simStateIMSI=[false, true], simLoaded=[false, true]),oplusNetworkTypeNr:20,isVoNrEnabled:true
+05-14 15:28:51.857  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository1-->stopListenImsStatusChanged
+05-14 15:28:51.857  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository-->isSupportShowVo5G phoneId: 1
+05-14 15:28:51.859 22129 22129 D CellBroadcastReceiver: onServiceStateChanged, ss: 0
+05-14 15:28:51.859 22129 22129 D CellBroadcastReceiver: networkOperator: 405871
+05-14 15:28:51.859 22129 22129 D CellBroadcastReceiver: update supported roaming operator as 
+05-14 15:28:51.861  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: widthSpec MeasureSpec: EXACTLY 1080 should be AT_MOST
+05-14 15:28:51.861  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: heightSpec MeasureSpec: EXACTLY 2378 should be AT_MOST
+05-14 15:28:51.862  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: widthSpec MeasureSpec: EXACTLY 1080 should be AT_MOST
+05-14 15:28:51.862  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: heightSpec MeasureSpec: EXACTLY 2378 should be AT_MOST
+05-14 15:28:51.863  3167  6894 D ActivityManager: Async freezing 22129 com.google.android.cellbroadcastreceiver
+05-14 15:28:51.864  4567  4567 I KeyguardUpdateMonitor: refreshSimState, changed:false,subId:1,slotId:1,state:5
+05-14 15:28:51.865  4567  4640 I SystemUi--QuickSettings: Tile.OplusCellularTile-->updateCarrierText: dialog not showing, ignore
+05-14 15:28:51.865  4912  4912 E QImsService: ImsConfigImpl : onSubscriptionsChanged unable to process due to SubscriptionInfo is null
+05-14 15:28:51.865  4912  4912 I QImsService: OplusPhoneStateTracker : onSubscriptionsChanged Last subId: 1 Current subId 1
+05-14 15:28:51.865  4912  4912 I QImsService: OplusPhoneStateTracker : onSubscriptionsChanged Last subId: -1 Current subId -1
+05-14 15:28:51.865  5425  6018 E Battery : ControllerCenter: onReceiver: mSubscriptionManager is null || mIsNeedRestoreMobile = false
+05-14 15:28:51.866  4884  5242 D NAS-CellularEvent: handleSubscriptionsChanged: slotId=1
+05-14 15:28:51.866  4765  6577 D OsAgent : updateMccmnc, operator: 405871, simCountryIso: in
+05-14 15:28:51.867  4567  4640 D SimStateHelper: sts slot:0, lock state:-1
+05-14 15:28:51.867  4884  5242 D NAS-CellularEvent: onImsRegistrationStateChanged, slotId=1state:true
+05-14 15:28:51.868  4884  6738 I SmartDataSwitchEventRegistrar: onImsRegistrationStatusChanged, slot: 1, sub:1, isRegistered: true
+05-14 15:28:51.868  4884  6738 I SmartDataSwitchStateManager: onImsRegisterStateChanged slotId: 1, state:true
+05-14 15:28:51.868  4862  4862 D QCNEJ/WwanInfoRelay: onSubscriptionsChanged currDDSId: 1 new DDS 1
+05-14 15:28:51.868  4567  4640 D SimStateHelper: sts slot:1, lock state:-1
+05-14 15:28:51.868  4567  4640 D SimStateHelper: needDisableMenu: slot1State=-1; slot2State=-1
+05-14 15:28:51.868  4567  4640 D SimStateHelper: needDisableMenu:false
+05-14 15:28:51.868 16732 23853 I HeadsetPhoneState: stopListenForPhoneState(), stopping listener, enabled_events=257
+05-14 15:28:51.869 21706 21752 I BugleRcsEngine: SIM state event delay enabled: attempts 3, maxAttempts 3, delaySeconds 90 MSIM delayseconds 90, effective delay seconds 90 [CONTEXT thread_id=1471 ]
+05-14 15:28:51.869 21706 21752 I BugleRcsEngine: reached max delay attempts, do not reschedule  [CONTEXT thread_id=1471 ]
+05-14 15:28:51.869  4862  4862 D QCNEJ/DataCallAgent: onSubscriptionsChanged: new DDS 1
+05-14 15:28:51.869  4862  6647 D QCNEJ/DataCallAgent: phoneCount: 2
+05-14 15:28:51.870  4862  6647 D QCNEJ/DataCallAgent: subs for 0th slot: [-1]
+05-14 15:28:51.870  4765  6577 V OsAgent : updateMccmnc
+05-14 15:28:51.870  4765  6577 D OsAgentAidlClient: [string_dataitem_update][1234] [HC] =>> [HS]
+05-14 15:28:51.870  7012  8679 W OplusAtlasAudioDetectionManager: unexpected message !
+05-14 15:28:51.870  7012  8679 D OplusAtlasAudioDetectionManager: MSG_CALL_STATE_CHANGED
+05-14 15:28:51.870  7012  8679 D OplusAtlasAudioDetectionManager: callStateChanged state: 0, len: 0
+05-14 15:28:51.870  4862  6647 D QCNEJ/DataCallAgent: subs for 1th slot: [1]
+05-14 15:28:51.871  4862  6647 D QCNEJ/DataCallAgent: mSubInfoReady[1] is set to true
+05-14 15:28:51.872  4884  5543 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+05-14 15:28:51.872 16732 23853 I HeadsetPhoneState: startListenForPhoneState(), subId=1, enabled_events=257
+05-14 15:28:51.872  4567  4567 I SystemUi--Keyguard: OplusEmergencyButtonExImpl-->updateEmergencyCallButton: isTablet=false isWifiOnly=false isInCall=false visible=true
+05-14 15:28:51.872  3167  4291 D NetworkPolicy: Normalization put networkpolicyNetworkTemplate: matchRule=CARRIER, matchSubscriberIds=[405871...], matchWifiNetworkKeys=[], metered=YES
+05-14 15:28:51.872  3167  4291 V NetworkPolicy: updateNetworkEnabledNL() return
+05-14 15:28:51.873  4839  6237 D EsimUtils MEP-debug: getSlotMapping=[UiccSlotMapping (mPortIndex=0, mPhysicalSlotIndex=0, mLogicalSlotIndex=0), UiccSlotMapping (mPortIndex=0, mPhysicalSlotIndex=1, mLogicalSlotIndex=1)]
+05-14 15:28:51.873  4839  4839 I Telephony: q0: TelecomAccountRegistry: onServiceStateChanged: newState=0, mServiceState=0
+05-14 15:28:51.875  4839  6237 D EsimUtils MEP-debug: isMepOff slotMapping=[UiccSlotMapping (mPortIndex=0, mPhysicalSlotIndex=0, mLogicalSlotIndex=0), UiccSlotMapping (mPortIndex=0, mPhysicalSlotIndex=1, mLogicalSlotIndex=1)]
+05-14 15:28:51.875 28441 22719 I PersonalSafety: (REDACTED) New count is %d compared to %d
+05-14 15:28:51.876  3167  4291 V NetworkPolicy: updateNotificationsNL not process
+05-14 15:28:51.878  4839  4839 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: true
+05-14 15:28:51.878  4839  4839 I Telephony:  isRttSupported: false
+05-14 15:28:51.878  4839  4839 I Telephony:  isUserRttSettingOn: false
+05-14 15:28:51.878  4839  4839 I Telephony:  alwaysAllowWhileRoaming: false
+05-14 15:28:51.878  4839  4839 I Telephony:  isRoaming: false
+05-14 15:28:51.878  4839  4839 I Telephony:  isOnWfc: false
+05-14 15:28:51.880  4839  4839 V OplusCustomizeCacheManager: queryCache name: cache_key.system_server.common_customize_cache18016 param: null
+05-14 15:28:51.880  4839  4839 V OplusCustomizeCacheManager: queryCache name: cache_key.system_server.common_customize_cache18013 param: null
+05-14 15:28:51.880  4839  4839 V OplusCustomizeCacheManager: queryCache name: cache_key.system_server.common_customize_cache18015 param: null
+05-14 15:28:51.881  4839  4839 V OplusCustomizeCacheManager: queryCache name: cache_key.system_server.common_customize_cache18017 param: Bundle[{SETTING=BLOCK, BUSINESS=NCT-DATA}]
+05-14 15:28:51.882  4839  5533 D PhoneInterfaceManager: QueryTelephonyChecker-getDataNetworkTypeForSubscriber: packageName = com.android.phone, isGrant = true
+05-14 15:28:51.882  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: widthSpec MeasureSpec: EXACTLY 1080 should be AT_MOST
+05-14 15:28:51.882  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: heightSpec MeasureSpec: EXACTLY 2378 should be AT_MOST
+05-14 15:28:51.883  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: widthSpec MeasureSpec: EXACTLY 1080 should be AT_MOST
+05-14 15:28:51.883  4567  4567 W KeyguardSecurityViewFlipper: onMeasure: heightSpec MeasureSpec: EXACTLY 2378 should be AT_MOST
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: onSubscriptionsChanged
+05-14 15:28:51.885  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:51.885  1980  1980 D SensorFeature: write 39 bytes:746157816748709,746157827859820,59592,0
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true, satelliteEnabledOrBeingEnabled=false
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: updateDefaults
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: isReadyToReevaluate: subInfoInitialized=true, carrierConfigsLoaded=true, satelliteEnabledOrBeingEnabled=false
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: updateDefaultValues: change: 0
+05-14 15:28:51.885  4839  4839 D MultiSimSettingController: disableDataForNonDefaultNonOpportunisticSubscriptions triggered, return directly
+05-14 15:28:51.888  4839  4839 D SatelliteController: Satellite for carrier is not supported.
+05-14 15:28:51.889  4839  4839 D SatelliteController: Satellite for carrier is not supported.
+05-14 15:28:51.889  4839  4839 D SatelliteController: registerForSatelliteModemStateChanged: add Listeners for ModemState
+05-14 15:28:51.889  4839  4839 E SatelliteController: registerForSatelliteModemStateChanged: mSatelliteSessionController is not initialized yet
+05-14 15:28:51.891  4839  4839 D ImsResolver: oldSubId: -1, newSubId: -1
+05-14 15:28:51.891  4839  4839 D ImsResolver: oldSubId: 1, newSubId: 1
+05-14 15:28:51.891  4839  4839 I CallNotifier: onSubscriptionsChanged
+05-14 15:28:51.891  4839  4839 I CallNotifier: updatePhoneStateListeners: update CF/MWI for subId=1
+05-14 15:28:51.891  4839  4839 I Telephony: TelecomAccountRegistry: onSubscriptionsChanged - reregister accounts
+05-14 15:28:51.891  4839  4839 D PhoneUtils: PhoneAccountHandle subId=1, slotId=1
+05-14 15:28:51.893  4839  4839 D Telephony: registerPstnPhoneAccount line1Number = 916****4969 subNumber = 916****4969
+05-14 15:28:51.893  4839  4839 D Telephony: color is transparent asign default instead -4716942
+05-14 15:28:51.894  4839  4839 D Telephony: isEmergencyPreferredAccount: subId=1, activeData=1
+05-14 15:28:51.894  4839  4839 D Telephony: isEmergencyPreferredAccount: Device does not require preference.
+05-14 15:28:51.895  4839  4839 I Telephony: isRttCurrentlySupported -- regular acct, hasVoiceAvailability: true
+05-14 15:28:51.895  4839  4839 I Telephony:  isRttSupported: false
+05-14 15:28:51.895  4839  4839 I Telephony:  isUserRttSettingOn: false
+05-14 15:28:51.895  4839  4839 I Telephony:  alwaysAllowWhileRoaming: false
+05-14 15:28:51.895  4839  4839 I Telephony:  isRoaming: false
+05-14 15:28:51.895  4839  4839 I Telephony:  isOnWfc: false
+05-14 15:28:51.896  4839  4839 D Telephony: p0: buildPstnPhoneAccount, phoneId: 1, mIsVideoCapable: true, 
+05-14 15:28:51.897  4839  4839 D Telephony: registerPstnPhoneAccount mIsVideoCapable = true
+05-14 15:28:51.898  4839  4839 I Telephony: reRegisterPstnPhoneAccount: subId: 1 - no change
+05-14 15:28:51.899  4839  4839 D InternationalRoamingNotification: init
+05-14 15:28:51.899  4839  4839 D InternationalRoamingNotification: do not createRoamingNotification for error version
+05-14 15:28:51.900  3167  3281 I system_server: Background young concurrent mark compact GC freed 42MB AllocSpace bytes, 83(1980KB) LOS objects, 24% free, 129MB/171MB, paused 6.419ms,8.045ms total 146.293ms
+05-14 15:28:51.903  4839  4839 V SimultaneousCallingTracker: Received EVENT 101
+05-14 15:28:51.903  4839  4839 V SimultaneousCallingTracker: generateVoiceCapablePhoneMapBasedOnUserAssociation: adding phoneId = 1
+05-14 15:28:51.903  4839  4839 I SimultaneousCallingTracker: updatePhoneMapAndSimultaneousCallSupportMap: mVoiceCapablePhoneMap.size = 1
+05-14 15:28:51.903  4839  4839 V SimultaneousCallingTracker: registerForImsRegistrationChanges: registering phoneId = 1
+05-14 15:28:51.903  4839  4839 V SimultaneousCallingTracker: generateSimultaneousCallSupportMap: returning simultaneousCallSubSupportMap = Phone ID=1 - Simultaneous calling compatible phone IDs=[]; 
+05-14 15:28:51.903  4839  4839 V SimultaneousCallingTracker: handleSimultaneousCallingSupportChanged
+05-14 15:28:51.904  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository-->getVoNrEnable: true
+05-14 15:28:51.904  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository1-->phoneId: 1, conflatedCallbackFlow init
+05-14 15:28:51.904  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository1-->startListenImsStatusChanged
+05-14 15:28:51.911  4862  6068 D IWlanJni: getDataRegistrationState start
+05-14 15:28:51.911  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository1-->onImsStatusChanged model: CapabilityTypeModel(isVolteSwitchOn=true, isWfcEnabledByUser=true, imsRegistered=true, voiceCapable=true, videoCapable=true, registerTech=3, isCrossSimCallingEnabledByUser=false, hasHideVolteOperator=false)
+05-14 15:28:51.912  4862  6087 D IWlanJni: new aidl event arrived
+05-14 15:28:51.912  4862  6087 D IWlanJni: handleEvent 10
+05-14 15:28:51.912  4862  6087 D IWlanJni: isThreadAttached start
+05-14 15:28:51.912  4862  6087 D IWlanJni: jni detached
+05-14 15:28:51.912  4862  6086 W IWlanProxy: RESP_WAKE_LOCK_TIMEOUT
+05-14 15:28:51.912  4862  6087 D IWlanJni: jni attached
+05-14 15:28:51.912  4862  6087 D IWlanJni: getDataRegistrationStateResponse start
+05-14 15:28:51.912  4862  6087 D IWlanJni: getJavaCallbackClass start
+05-14 15:28:51.912  4862  6087 D IWlanJni: getJavaCallbackClass End midIs[1]
+05-14 15:28:51.912  4862  6087 I IWlanAidlClient: getDataRegistrationStateResponse called
+05-14 15:28:51.913  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository-->phoneId:1 get5GCellCount: 1
+05-14 15:28:51.913  4862  6086 W IWlanNetworkService: 49624 > Response Processed
+05-14 15:28:51.914  4567  4795 I SystemUi--Statusbar: OplusMobileConnectionRepository-->isVoNrEnabled getVoNrSettings: true phoneid:1
+05-14 15:28:51.914  4839  4839 D SatelliteController: Satellite for carrier is not supported.
+05-14 15:28:51.915  4839  4839 D SatelliteController: Satellite for carrier is not supported.
+05-14 15:28:51.915  4839  4839 D SatelliteController: registerForSatelliteModemStateChanged: add Listeners for ModemState
+05-14 15:28:51.915  4839  4839 E SatelliteController: registerForSatelliteModemStateChanged: mSatelliteSessionController is not initialized yet
+05-14 15:28:51.978 12116 13481 D BufferPoolAccessor2.0: bufferpool2 0xb400007a67bebc28 : 5(19599360 size) total buffers - 5(19599360 size) used buffers - 5284/5290 (recycle/alloc) - 13/5289 (fetch/transfer)
+05-14 15:28:52.109  1868 23867 I sensors-hal: handle_oplus_wise_rgb_event:189, high_pwm_light:lux 81.4,cct 7591.6,brl/algo/ir 1259.0/2.0/60.9,pwm/dc 0.0/0.0,rgbc 5015.127930/4183.332031/2848.950684/10739.973633,ts 746157789165405,cnt 34380,flag 59592
+05-14 15:28:52.109  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34381)(cct,lux,ir)[7591.56, 81.45, 60.867771](rgbc)[4927.95, 4100.15, 2789.93, 10594.78](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59592
+05-14 15:28:52.118 12116 12116 W MainTimeBarController: isScrubbing: no active timebar
+05-14 15:28:52.118 12116 12116 W MainTimeBarController: isScrubbing: no active timebar
+05-14 15:28:52.118 12116 12116 W MainTimeBarController: getDisplayCurrentTimeMillis: no active timebar
+05-14 15:28:52.146 10579 10621 D IHansComunication: HANS sendMessageToKernel: threadId = 520573652032, netLinkSetup = 1, type = FROZEN_TRANS, targetUid = 10472, pkgCmd = PKG_CMD_MAX
+05-14 15:28:52.163  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:52.164  1980  1980 D SensorFeature: write 39 bytes:746158095212042,746158106323153,59593,0
+05-14 15:28:52.210  3332  3787 D QmiClient: qmiServiceEventCallback recv msg id 1099
+05-14 15:28:52.211  3332  3787 D QmiClient: enter -mServiceType 4 onQmiServiceEventCallback msgId 1099
+05-14 15:28:52.211  3332  3787 D QmiClient: onQmiServiceEventCallback - enter. msgId=1099
+05-14 15:28:52.211  3332  3787 D QmiVsClientEvent: QosPeriodReportInd MSG IND data_len 2052
+05-14 15:28:52.211  3332  3787 D QmiVsClientEvent: qmiVsClientNotifyQosPeriodReportIndEvent - RADIO_EVENT_QOS_PERIOD_REPORT_NOTIFY_IND
+05-14 15:28:52.211  3332  3366 D VsProxy : handleMessage msg is 2420
+05-14 15:28:52.212  3332  3366 D VsProxy : handleQosPeriodReportInd for instance 1 data_len 208
+05-14 15:28:52.211  2546  3788 D QmiClient: qmiServiceEventCallback recv msg id 1099
+05-14 15:28:52.212  2546  3788 D QmiClient: enter -mServiceType 4 onQmiServiceEventCallback msgId 1099
+05-14 15:28:52.212  2546  3788 D QmiClient: onQmiServiceEventCallback - enter. msgId=1099
+05-14 15:28:52.212  2546  3788 D QmiVsClientEvent: QosPeriodReportInd MSG IND data_len 2052
+05-14 15:28:52.212  2546  3788 D QmiVsClientEvent: qmiVsClientNotifyQosPeriodReportIndEvent - RADIO_EVENT_QOS_PERIOD_REPORT_NOTIFY_IND
+05-14 15:28:52.213  4990  5848 D SubsysRadioIndication[1]: radioQosPeriodReportInd result [8, -40, -11, -47, -89, 9, 18, 21, 8, -53, -12, -47, -89, 9, 16, -54, 1, 32, -128, -126, 11, 40, -49, 4, 48, 25, 56, -123, 1, 26, 15, 8, -76, -12, -47, -89, 9, 16, 25, 40, 30, 56, -16, 16, 72, 12, 34, 10, 8, -120, -15, -47, -89, 9, 16, 1, 32, 3, 58, 61, 8, -44, -11, -47, -89, 9, 16, 5, 24, -50, -56, 9, 32, -109, 5, 40, -100, -1, -1, -1, -1, -1, -1, -1, -1, 1, 48, -10, -1, -1, -1, -1, -1, -1, -1, -1, 1, 56, 16, 64, -115, -1, -1, -1, -1, -1, -1, -1, -1, 1, 72, -99, -1, -1, -1, -1, -1, -1, -1, -1, 1, 66, 40, 8, -66, -11, -47, -89, 9, 16, 5, 24, 1, 34, 13, 8, -50, -56, 9, 16, -109, 5, 24, 28, 32, 2, 48, 1, 34, 13, 8, -32, -39, 38, 16, -35, 2, 24, 78, 32, 13, 48, 2, 90, 14, 8, -12, -16, -47, -89, 9, 16, 5, 24, 1, 32, 1, 40, 1, 98, 10, 8, -120, -15, -47, -89, 9, 16, 3, 24, 5, 122, 15, 8, -59, -12, -47, -89, 9, 16, -66, 1, 24, -26, 1, 32, -50, 9]
+05-14 15:28:52.213  4990  4990 D NetworkService[1]: handleMessage what:1005
+05-14 15:28:52.213  2546  2675 D VsProxy : handleMessage msg is 2420
+05-14 15:28:52.213  4990  4990 D RadioAtomTracker: parseQosPeriodData ModemQos:CellularQosInfo1{5G, 156750/659, EndcState=1, Band=28, DLBW=2, Rsrp=-100, Rsrq=-10, Snr=16, SvcStatus=3, ULPDCPNumDataPdu=202, ULPDCPNumDropPdu=0, ULPDCPTput=180480, ULRLCNumDataPdu=591, ULRLCNumRetxPdu=25, ULGrant=133, ULBSR=0, ULBler=0, DLPDCPNumDataPdu=30, DLPDCPTput=2160, DLRLCNumDataPdu=25, DLRLCNumRetxPdu=0, DLRLCNumDropPdu=0, DLMACPaddingBytes=0, DLPdcpNumMissToUppPdu=0, DLBler=12, RlfCount=0, CellChangeCount=0, IsRedirectionOccur=0, IsDualSimConflict=0, Latency=21, Sub1RrcState=0, Sub2RrcState=3, RachCount=1, CalcPower=190, Mtpl=230, PathLoss=1230, CellLoad=0}
+05-14 15:28:52.213  2546  2675 D VsProxy : handleQosPeriodReportInd for instance 0 data_len 24
+05-14 15:28:52.214  4990  4990 D NetworkService[1]: EVENT_REG_QOS_PERIOD_REPORT_IND_CHANGED ENTER
+05-14 15:28:52.214  4990  5848 D SubsysRadioIndication[0]: radioQosPeriodReportInd result [8, -40, -11, -47, -89, 9, 34, 10, 8, -120, -15, -47, -89, 9, 16, 1, 32, 3, 66, 0, 90, 0, 98, 0]
+05-14 15:28:52.215  4990  4990 D NetworkService[0]: handleMessage what:1005
+05-14 15:28:52.215  4990  4990 D RadioAtomTracker: parseQosPeriodData ModemQos:CellularQosInfo-1{0G, -1/-1, EndcState=0, Band=-1, DLBW=-1, Rsrp=-1, Rsrq=-1, Snr=-999, SvcStatus=0, ULPDCPNumDataPdu=-1, ULPDCPNumDropPdu=-1, ULPDCPTput=-1, ULRLCNumDataPdu=-1, ULRLCNumRetxPdu=-1, ULGrant=-1, ULBSR=-1, ULBler=-1, DLPDCPNumDataPdu=-1, DLPDCPTput=-1, DLRLCNumDataPdu=-1, DLRLCNumRetxPdu=-1, DLRLCNumDropPdu=-1, DLMACPaddingBytes=-1, DLPdcpNumMissToUppPdu=-1, DLBler=-1, RlfCount=0, CellChangeCount=0, IsRedirectionOccur=0, IsDualSimConflict=0, Latency=0, Sub1RrcState=0, Sub2RrcState=3, RachCount=0, CalcPower=-1, Mtpl=-1, PathLoss=-1, CellLoad=0}
+05-14 15:28:52.215  4990  4990 D NetworkService[0]: EVENT_REG_QOS_PERIOD_REPORT_IND_CHANGED ENTER
+05-14 15:28:52.217  1946 15903 W QC2Comp : [vp9D_157] Skipping empty output buffer
+05-14 15:28:52.300 28441 18699 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=true, isWifiConnected=false)
+05-14 15:28:52.373  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34386)(cct,lux,ir)[7564.40, 77.90, 58.861885](rgbc)[4886.65, 4056.12, 2779.20, 10487.05](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59593
+05-14 15:28:52.435  4990  7375 D ShortVideoApp-167-10201: transport layer data is invalid
+05-14 15:28:52.436  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:52.436  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:52.436  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:52.437  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:52.437  1980  1980 D SensorFeature: write 39 bytes:746158368883083,746158379994194,59594,0
+05-14 15:28:52.608  3167  3454 D TheiaManager: com.android.server.wm.OplusWindowManagerService@382db83 getDeclaredField : com.android.server.wm.WindowManagerService.mRoot
+05-14 15:28:52.608  3167  3454 D TheiaManager: com.android.server.wm.RootWindowContainer@221aadb callDeclaredMethod : com.android.server.wm.RootWindowContainer.getTopFocusedDisplayContent param[] null args[]null
+05-14 15:28:52.619  3167  3454 D TheiaManager: Display{#0 state=ON size=1080x2378 ROTATION_0} getDeclaredField : com.android.server.wm.DisplayContent.mCurrentFocus
+05-14 15:28:52.620  3167  3454 I TheiaManager: hasTopDisplayFocusWindow focus:Window{986dd79 u0 com.google.android.youtube/com.google.android.youtube.app.honeycomb.Shell$HomeActivity}
+05-14 15:28:52.620  3167  3454 I Theia.NoFocusWindow: top display win is not null, ignore nofocus happen
+05-14 15:28:52.625  3167  3454 I Theia.NoFocusWindow: nofous happen not valid, msg:1
+05-14 15:28:52.632  5425  6099 W Battery : ThermalControllHandler: MSG_THERMAL_CONTROL_CPU_CTRL_CHANGED: ThermalControlState=true, curThermalPolicyCpu=5, curCpu=3, isUserForeground=true
+05-14 15:28:52.633  5425  6099 I [UAH_CLIENT]: uahRuleCtl, ruleId:4, status:1
+05-14 15:28:52.636  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34391)(cct,lux,ir)[7576.63, 81.31, 59.248013](rgbc)[4964.66, 4144.19, 2816.76, 10707.19](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59594
+05-14 15:28:52.636  1868 23867 I sensors-hal: handle_oplus_wise_rgb_event:189, high_pwm_light:lux 81.3,cct 7576.6,brl/algo/ir 1259.0/2.0/59.2,pwm/dc 0.0/0.0,rgbc 5042.658203/4178.438965/2848.950684/10805.546875,ts 746158337778374,cnt 34390,flag 59594
+05-14 15:28:52.636  3167  4196 D FusionLightNextGen: process end reported = 1, mode: 0, cnt: 62620, lux 57.5, cct 6742.0, r/g/b/c: 4909.6/4056.1/2768.5/10505.8, R/G/B: 119.0/116.0/105.0, bri 1259.0, match 0.72, ir 0.061662, conf 0.0, ts 746158381802384
+05-14 15:28:52.655  1946 15903 W QC2Comp : [vp9D_157] Skipping empty output buffer
+05-14 15:28:52.662 12116 15900 W OplusFeedbackInfo: 0xb400007a2c552200 c2.qti.vp9.decoder codec[0xb400007a4ffe6800] 854x480 inputFps=23 outputFps=27 renderFps=25, discardFps=0
+05-14 15:28:52.692  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+05-14 15:28:52.692  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+05-14 15:28:52.700  3332  3821 D QmiClient: qmiServiceEventCallback recv msg id 47
+05-14 15:28:52.700  3332  3821 D QmiClient: enter -mServiceType 10 onQmiServiceEventCallback msgId 47
+05-14 15:28:52.700  3332  3821 D QmiClient: onQmiServiceEventCallback - enter. msgId=47
+05-14 15:28:52.700  3332  3375 D OttProxy: handleMessage msg is 3001
+05-14 15:28:52.701  4990  5848 D SubsysRadioIndication[1]: radioLinkLatencyInfoInd
+05-14 15:28:52.702  4990  5848 D SubsysRadioIndication[1]: notify enter
+05-14 15:28:52.702  4990  4990 D NetworkService[1]: handleMessage what:1008
+05-14 15:28:52.702  4990  4990 D NetworkService[1]: EVENT_REG_LINK_LATENCY_INFO_CHANGE ulLatency:-1
+05-14 15:28:52.708  1853 16822 I vendor.qti.bluetooth@1.1-ibs_handler: DeviceSleep: TX Awake, Sending SLEEP_IND
+05-14 15:28:52.712  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:52.712  1980  1980 D SensorFeature: write 39 bytes:746158643415948,746158654527059,59595,0
+05-14 15:28:52.733  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+05-14 15:28:52.733  1853 16819 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+05-14 15:28:52.849  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+05-14 15:28:52.849  1853 16819 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+05-14 15:28:52.849  1853 16819 E vendor.qti.bluetooth@1.1-wake_lock: Acquire write to wakelock file failed -1 - Operation not permitted
+05-14 15:28:52.849  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+05-14 15:28:52.852 16732 16781 I bluetooth: [btif_bqr.cc:1267] vendor_specific_event_callback: Unhandled BQR subevent 0x03
+05-14 15:28:52.852 16732 16781 D bluetooth: [btif_bqr.cc:752] CategorizeBqrEvent: length: 72 quality_report_id: 0x03
+05-14 15:28:52.852 16732 16781 I bluetooth: [btif_bqr.cc:1204] bqr_delivery_event: len: 72, bqr_id: 3, addr: xx:xx:xx:xx:bc:4e, lmp_ver: 13, manufacturer_id: 688, lmp_subver: 1811
+05-14 15:28:52.858 16732 16838 W Bluetooth: [oplus_bt_bqr_extern.cc:63] ParseBqrEvt bqr id: 3
+05-14 15:28:52.858 16732 16838 I BluetoothInCallService: BluetoothInCallService = com.android.bluetooth.telephony.BluetoothInCallService@571e609
+05-14 15:28:52.858 16732 16838 I BluetoothQualityReportJni: [com_android_bluetooth_BluetoothQualityReport.cpp:48] bqr_delivery_callback: 
+05-14 15:28:52.859 16732 16838 I BluetoothQualityReportNativeInterface: rawData Length = 102
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface: BQR: {
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:   mAddr: XX:XX:XX:XX:BC:4E, mLmpVer: 0x0D, mLmpSubVer: 0x0713, mManufacturerId: 0x02B0, mName: OnePlus Nord Buds 3r, mBluetoothClass: 240404,
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:   BqrCommon: {
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:     mQualityReportId: A2DP choppy(0x03), mPacketType: TYPE_2DH3(0x18), mConnectionHandle: 0x0008, mConnectionRole: 0(0), mTxPowerLevel: 11, mRssi: -64, mSnr: 0, mUnusedAfhChannelCount: 43,
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:     mAfhSelectUnidealChannelCount: 0, mLsto: 8000, mPiconetClock: 0x0E50D5D0, mRetransmissionCount: 0, mNoRxCount: 0, mNakCount: 0, mLastTxAckTimestamp: 0x00000000, mFlowOffCount: 0,
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:     mLastFlowOnTimestamp: 0x0FFFFF00, mOverflowCount: 0, mUnderflowCount: 40996, mAddr: XX:XX:XX:XX:00:00, mCalFailedItemCount: 0,
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:     mTxTotalPackets: 0, mTxUnackPackets: 0, mTxFlushPackets: 0, mTxLastSubeventPackets: 0, mCrcErrorPackets: 0, mRxDupPackets: 1308622848, mRxUnRecvPackets: 3740328892, mCoexInfoMask: 156
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:   }
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:   BqrVsA2dpChoppy: {
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:     mArrivalTime: 0x00000000, mScheduleTime: 0x00000000, mGlitchCount: 0, mMinorGlitchCount: 0, mMediumGlitchCount: 0, mSeriousGlitchCount: 0, mCriticalGlitchCount: 0, mTotalGlitchCount: 0, mTxCxmDenials: 0, mRxCxmDenials: 0, mAclTxQueueLength: 0, mTxPL: 0, mLinkQuality: ULTRA_HIGH(0x00)
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface:   }
+05-14 15:28:52.863 16732 16838 I BluetoothQualityReportNativeInterface: }
+05-14 15:28:52.864  1733 21448 E TetherController: property_get sys.radio.data.modem_share_flag return 0, 1!
+05-14 15:28:52.864 16732 16732 I oplus_bt_dual_sync: [oplus_bt_dual_sync.cc:151] stack_down_sync_action: type=18, len=17
+05-14 15:28:52.864 16732 16732 I oplus_bt_qos_monitor: [oplus_bt_qos_monitor.cc:118] get_oplus_qos_data: getting qos data
+05-14 15:28:52.877  3167  4291 V NetworkPolicy: updateNetworkEnabledNL() return
+05-14 15:28:52.877  3167  4291 V NetworkPolicy: updateNotificationsNL not process
+05-14 15:28:52.884  1853 16811 E vendor.qti.bluetooth@1.1-wake_lock: Release wake lock not initialized/acquired
+05-14 15:28:52.880  4884  5543 V MonthTrafficAlert: getWarningNotification subId:1 numWarningNotificaion:0
+05-14 15:28:52.890  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+05-14 15:28:52.890  1853 16819 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK OFF
+05-14 15:28:52.899  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34396)(cct,lux,ir)[7595.18, 80.51, 59.212280](rgbc)[4781.12, 3943.59, 2709.45, 10224.75](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59595
+05-14 15:28:52.900  3167  6019 I AICCTModule: SensorFilter: findSecondNearestValue, sensorValue: 6741.954 nearestMaxValue:6741.954 secondNearestValue: 6741.954
+05-14 15:28:52.900  3167  6019 I AICCTModule: SensorFilter: findSecondNearestValue, sensorValue: 55.699306 nearestMaxValue:55.699306 secondNearestValue: 56.83417
+05-14 15:28:52.905  4839  5533 D PhoneInterfaceManager: QueryTelephonyChecker-getDataNetworkTypeForSubscriber: packageName = com.android.phone, isGrant = true
+05-14 15:28:52.982  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:52.982  1980  1980 D SensorFeature: write 39 bytes:746158913876833,746158924987944,59596,0
+05-14 15:28:53.011  3167  4638 D NirvanaManager: enable_bg_limit_level_thermal feature is not supported
+05-14 15:28:53.012  4990  4990 D RFPowerBoostManager: my thermal listener proxy invoke method:notifyThermalBroadCast args len:2
+05-14 15:28:53.012  4990  4990 D RFPowerBoostManager: current temp is 39, mInCalling is false, mIsGameMode is false, current threshold is 41
+05-14 15:28:53.013 12140 12338 W MTS_AppSceneDetector: [m]handleThermalChange, detector map is null or empty
+05-14 15:28:53.013 12140 12344 W MTS_AudioDetectionStatusMachine: [m]Cloud configuration is not support
+05-14 15:28:53.015 22747 22765 I Bugle   : pSIM transferStatus is 0 [CONTEXT sub_id=1 ]
+05-14 15:28:53.029 22747 22765 I RcsAvailabilityCache: Cached availability not found for simId: redacted-pii:sim_id[chars:20,last3:457]
+05-14 15:28:53.033 12116 12116 W MainTimeBarController: isScrubbing: no active timebar
+05-14 15:28:53.033 12116 12116 W MainTimeBarController: isScrubbing: no active timebar
+05-14 15:28:53.033 12116 12116 W MainTimeBarController: getDisplayCurrentTimeMillis: no active timebar
+05-14 15:28:53.040  1853 16811 E vendor.qti.bluetooth@1.1-wake_lock: Release wake lock not initialized/acquired
+05-14 15:28:53.044 28441 28441 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService mCallingUid=10132 }
+05-14 15:28:53.044 28441 28441 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService mCallingUid=10132 }
+05-14 15:28:53.065 28441 28441 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... xflg=0x4 cmp=com.google.android.gms/.chimera.PersistentApiService mCallingUid=10132 }
+05-14 15:28:53.076 22747 22759 V ClearcutMetricXmitter: Transmission is done.
+05-14 15:28:53.094  1946 15903 W QC2Comp : [vp9D_157] Skipping empty output buffer
+05-14 15:28:53.127 22747 22759 V ClearcutMetricXmitter: Transmission is done.
+05-14 15:28:53.162  1868 23867 I sensors-hal: handle_oplus_wise_rgb_event:189, high_pwm_light:lux 66.0,cct 7309.5,brl/algo/ir 1259.0/2.0/61.5,pwm/dc 0.0/0.0,rgbc 4427.812012/3576.626465/2435.825684/9344.199219,ts 746158886310197,cnt 34400,flag 59596
+05-14 15:28:53.163  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34401)(cct,lux,ir)[7309.47, 65.96, 61.491455](rgbc)[4436.99, 3581.52, 2430.46, 9348.88](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59596
+05-14 15:28:53.186  3167  4205 V AlarmManager: sending alarm Alarm{e4a0e9d type 1 origWhen 1778752733186 whenElapsed 746159129 android} uid 1000 whenElapsed 746159129 windowLength 0 maxWhenElapsed 746159129 repeatInterval 0 action null component null tag StorgaeBandInfoAlarmTag flags 0x9 procName system_server
+05-14 15:28:53.187  3167 27337 E OplusStorageUFSBandwidth: storage_io_metrics_path is /proc/oplus_storage/io_metrics/forever/
+05-14 15:28:53.190  3167 27337 E OplusStorageUFSBandwidth: Bandwidth - Read: 11.97 MB/s, Write: 0.00 MB/s
+05-14 15:28:53.191  3167 27337 E OplusStorageUFSBandwidth: Task time: 4ms
+05-14 15:28:53.194  3167 27337 E OplusStorageUFSBandwidth: Alarm set to trigger in 10 seconds
+05-14 15:28:53.209  2546  3788 D QmiClient: qmiServiceEventCallback recv msg id 1099
+05-14 15:28:53.209  3332  3787 D QmiClient: qmiServiceEventCallback recv msg id 1099
+05-14 15:28:53.209  3332  3787 D QmiClient: enter -mServiceType 4 onQmiServiceEventCallback msgId 1099
+05-14 15:28:53.209  2546  3788 D QmiClient: enter -mServiceType 4 onQmiServiceEventCallback msgId 1099
+05-14 15:28:53.209  2546  3788 D QmiClient: onQmiServiceEventCallback - enter. msgId=1099
+05-14 15:28:53.209  3332  3787 D QmiClient: onQmiServiceEventCallback - enter. msgId=1099
+05-14 15:28:53.209  2546  3788 D QmiVsClientEvent: QosPeriodReportInd MSG IND data_len 2052
+05-14 15:28:53.209  3332  3787 D QmiVsClientEvent: QosPeriodReportInd MSG IND data_len 2052
+05-14 15:28:53.209  2546  3788 D QmiVsClientEvent: qmiVsClientNotifyQosPeriodReportIndEvent - RADIO_EVENT_QOS_PERIOD_REPORT_NOTIFY_IND
+05-14 15:28:53.209  3332  3787 D QmiVsClientEvent: qmiVsClientNotifyQosPeriodReportIndEvent - RADIO_EVENT_QOS_PERIOD_REPORT_NOTIFY_IND
+05-14 15:28:53.209  3332  3366 D VsProxy : handleMessage msg is 2420
+05-14 15:28:53.209  2546  2675 D VsProxy : handleMessage msg is 2420
+05-14 15:28:53.209  3332  3366 D VsProxy : handleQosPeriodReportInd for instance 1 data_len 201
+05-14 15:28:53.210  2546  2675 D VsProxy : handleQosPeriodReportInd for instance 0 data_len 24
+05-14 15:28:53.212  3167  4407 I OplusWifiSarManager: Received Data State Change: 3
+05-14 15:28:53.212  3167  4407 I OplusWifiSarManager: mWifiConnected: false mWifiState: false
+05-14 15:28:53.213  4990 11974 D SubsysRadioIndication[0]: radioQosPeriodReportInd result [8, -64, -3, -47, -89, 9, 34, 10, 8, -120, -15, -47, -89, 9, 16, 1, 32, 3, 66, 0, 90, 0, 98, 0]
+05-14 15:28:53.213  3167  4407 D OplusWifiSarManager: set wifi_dbs_enable to false
+05-14 15:28:53.213  3167  4407 D OplusWifiSarManager: wifiBand mWifi2gState:true mWifi5gState: false mWifi5gBand:WIFI_5G_DISABLE mWifi6gBand:WIFI_5G_DISABLE
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sar sensor state:
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 0, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 1, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 2, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 3, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 4, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 5, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 6, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 7, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 8, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 9, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 10, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 11, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 12, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 13, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 14, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 15, state: null
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: project: 24881, country: IN
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor state: earpiece: 128, sensor: null, isScreenOn: true
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: modem state: mCellOn: false mDataOn: true mData5gOn: true
+05-14 15:28:53.213 16732 23938 D oplus_bt_power: [oplus_bt_power.cc:130]  set_max_power_impl, state = 0x161
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: wifi state: mWifiConnected: false mWifiSapEnabled: true mWifiP2pConnected: false mWifi2gState: true mWifi5gState: false mWifi5gBand: WIFI_5G_DISABLE mWifi6gBand: WIFI_5G_DISABLE mIsBluetoothTxOn: true
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: mSta5gBand: WIFI_5G_DISABLE , mP2p5gBand: WIFI_5G_DISABLE , mSap5gBand: WIFI_5G_DISABLE , mSta6gBand: WIFI_5G_DISABLE , mP2p6gBand: WIFI_5G_DISABLE , mSap6gBand: WIFI_5G_DISABLE , wifiBand5g: WIFI_5G_DISABLE , wifiBand6g: WIFI_5G_DISABLE
+05-14 15:28:53.213 16732 23938 E oplus_bt_power: [oplus_bt_power.cc:145]  dcsar not support or not on
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: wifisar engineerMode state: enable: false, Regdomain: , modemWorkType(2:4G, 3:5G): -1, sensorWorkType: -1, wifiChannel2.4G: -1, wifiChannel5G: -1, wifiChannel6G: -1 mWifiSarTestFoldWorkType((1=unfold,0=fold)):-1, bt work type: -1, hotspot work type: -1
+05-14 15:28:53.213 16732 23938 D oplus_bt_power: [oplus_bt_power.cc:203]  set_max_power_impl, state_key = 0000000101100001, br_sar=0x44, edr_sar=0x3e, ble_sar=0x18
+05-14 15:28:53.213 16732 23938 D oplus_bt_iot_deivice_identity: [oplus_bt_stack_device_identity.cc:661] oplus_is_tv: cod is 0x240404
+05-14 15:28:53.213  3167  4407 I OplusWifiSarManager: sensor index: 13, max: 16
+05-14 15:28:53.213 16732 23938 D oplus_bt_hpm: [oplus_bt_hpm.cc:724] oplus_bt_hpm_is_processed_sar: acl_num = 1, is_oplus_active_link = true, sar_edr = 62
+05-14 15:28:53.213  3167  4407 D OplusWifiSarManager:  state: 11110001001110000 country: IN
+05-14 15:28:53.213 16732 23938 D oplus_bt_hpm: [oplus_bt_hpm.cc:675] oplus_bt_hpm_notify_sar_state: edr_sar = 62, edr_normal = 56, edr_hpm = 62
+05-14 15:28:53.213 16732 23938 D oplus_bt_power: [oplus_bt_power.cc:219]  send_vendor_sar_command, br_sar=0x44, edr_sar=0x3e, ble_sar=0x18
+05-14 15:28:53.213 16732 23938 D bt_shim_hci: [hci_layer.cc:235] transmit_command: Sending command Unknown OpCode(0xfcda)
+05-14 15:28:53.213  4990  5848 D SubsysRadioIndication[1]: radioQosPeriodReportInd result [8, -64, -3, -47, -89, 9, 18, 19, 8, -34, -5, -47, -89, 9, 16, 3, 32, -114, 2, 40, 7, 56, 102, 64, 7, 72, 50, 26, 13, 8, -89, -3, -47, -89, 9, 16, 6, 40, 7, 56, -120, 7, 34, 10, 8, -120, -15, -47, -89, 9, 16, 1, 32, 3, 58, 61, 8, -19, -4, -47, -89, 9, 16, 5, 24, -50, -56, 9, 32, -109, 5, 40, -99, -1, -1, -1, -1, -1, -1, -1, -1, 1, 48, -10, -1, -1, -1, -1, -1, -1, -1, -1, 1, 56, 17, 64, -99, -1, -1, -1, -1, -1, -1, -1, -1, 1, 72, -112, -1, -1, -1, -1, -1, -1, -1, -1, 1, 66, 46, 8, -61, -7, -47, -89, 9, 16, 5, 24, 2, 34, 19, 8, -50, -56, 9, 16, -109, 5, 24, 28, 32, 2, 40, -110, -128, -98, -127, 12, 48, 1, 34, 13, 8, -32, -39, 38, 16, -35, 2, 24, 78, 32, 13, 48, 2, 90, 0, 98, 10, 8, -120, -15, -47, -89, 9, 16, 3, 24, 5, 122, 20, 8, -89, -3, -47, -89, 9, 16, -1, -1, 1, 24, -1, -1, 1, 32, -1, -1, -1, -1, 15]
+05-14 15:28:53.214  1853  1853 D vendor.qti.bluetooth@1.1-ibs_handler: SerialClockVote: vote for UART CLK ON
+05-14 15:28:53.214  4990  4990 D SubsysEventListenerManager-SubsysTelephonyCallback[1]: onDataActivity
+05-14 15:28:53.214  4990  4990 D DataService[1]: onDataActivity direction:3
+05-14 15:28:53.215  4990  4990 D NetworkService[0]: handleMessage what:1005
+05-14 15:28:53.215  4990  4990 D RadioAtomTracker: parseQosPeriodData ModemQos:CellularQosInfo-1{0G, -1/-1, EndcState=0, Band=-1, DLBW=-1, Rsrp=-1, Rsrq=-1, Snr=-999, SvcStatus=0, ULPDCPNumDataPdu=-1, ULPDCPNumDropPdu=-1, ULPDCPTput=-1, ULRLCNumDataPdu=-1, ULRLCNumRetxPdu=-1, ULGrant=-1, ULBSR=-1, ULBler=-1, DLPDCPNumDataPdu=-1, DLPDCPTput=-1, DLRLCNumDataPdu=-1, DLRLCNumRetxPdu=-1, DLRLCNumDropPdu=-1, DLMACPaddingBytes=-1, DLPdcpNumMissToUppPdu=-1, DLBler=-1, RlfCount=0, CellChangeCount=0, IsRedirectionOccur=0, IsDualSimConflict=0, Latency=0, Sub1RrcState=0, Sub2RrcState=3, RachCount=0, CalcPower=-1, Mtpl=-1, PathLoss=-1, CellLoad=0}
+05-14 15:28:53.215  4990  4990 D NetworkService[0]: EVENT_REG_QOS_PERIOD_REPORT_IND_CHANGED ENTER
+05-14 15:28:53.215  4990  4990 D NetworkService[1]: handleMessage what:1005
+05-14 15:28:53.216  1853  1853 E vendor.qti.bluetooth@1.1-wake_lock: Acquire write to wakelock file failed -1 - Operation not permitted
+05-14 15:28:53.216  1853  1853 I vendor.qti.bluetooth@1.1-ibs_handler: DeviceWakeUp: Writing IBS_WAKE_IND
+05-14 15:28:53.216  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_ACK: 0xFC
+05-14 15:28:53.216  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Signal wack_cond_
+05-14 15:28:53.216  1853  1853 D vendor.qti.bluetooth@1.1-ibs_handler: DeviceWakeUp: Unblocked from waiting for FC, pthread_cond_timedwait ret = 0
+05-14 15:28:53.216  4990  4990 D RadioAtomTracker: parseQosPeriodData ModemQos:CellularQosInfo1{5G, 156750/659, EndcState=2, Band=28, DLBW=2, Rsrp=-99, Rsrq=-10, Snr=17, SvcStatus=3, ULPDCPNumDataPdu=3, ULPDCPNumDropPdu=0, ULPDCPTput=270, ULRLCNumDataPdu=7, ULRLCNumRetxPdu=0, ULGrant=102, ULBSR=7, ULBler=50, DLPDCPNumDataPdu=7, DLPDCPTput=904, DLRLCNumDataPdu=6, DLRLCNumRetxPdu=0, DLRLCNumDropPdu=0, DLMACPaddingBytes=0, DLPdcpNumMissToUppPdu=0, DLBler=0, RlfCount=0, CellChangeCount=0, IsRedirectionOccur=0, IsDualSimConflict=0, Latency=0, Sub1RrcState=0, Sub2RrcState=3, RachCount=0, CalcPower=32767, Mtpl=32767, PathLoss=-1, CellLoad=0}
+05-14 15:28:53.217  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+05-14 15:28:53.217  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+05-14 15:28:53.219 16732 16838 I BluetoothHciVendorSpecificJni: [com_android_bluetooth_BluetoothHciVendorSpecific.cpp:84] onEvent: 
+05-14 15:28:53.219 16732 16791 D bt_shim_hci: [hci_layer.cc:196] OnTransmitPacketCommandComplete: Received cmd complete for Unknown OpCode(0xfcda)
+05-14 15:28:53.218  4567  4567 D Tile.OplusCellularTile: refreshState: tile not listening, ignore
+05-14 15:28:53.219 16732 16781 D oplus_bt_power: [oplus_bt_power.cc:345]  power_cntrl_callback: param->opcode=fcda subopcode=e status=0
+05-14 15:28:53.220  4567  4767 I SystemUi--Statusbar: MobileConnectionRepositoryImpl-->subId:1 isSoftSimCard:false slotId:1
+05-14 15:28:53.220  4990  4990 D NetworkService[1]: EVENT_REG_QOS_PERIOD_REPORT_IND_CHANGED ENTER
+05-14 15:28:53.245  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:53.245  1980  1980 D SensorFeature: write 39 bytes:746159176955531,746159188066642,59597,0
+05-14 15:28:53.258  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+05-14 15:28:53.351  4990  5763 D RadioProxyJ[1]: [80231]> getRRCStatus
+05-14 15:28:53.352  3332  3380 D QmiNasClient: getRRCStatus - enter
+05-14 15:28:53.355  3332  3775 D QmiNasClient: getRRCStatus callback - enter
+05-14 15:28:53.355  3332  3775 D QmiNasClient: getRRCStatus result.rsp.rrcStatusInfo.rrcStatus = 1
+05-14 15:28:53.355  3332  3380 D NasProxy: handleMessage msg is 4001
+05-14 15:28:53.356  3332  3380 D RadioProxy: getRRCStatus : response cb for instance 1
+05-14 15:28:53.356  4990  5848 D RadioProxyJ[1]: [80231]< getRRCStatusResponse 1
+05-14 15:28:53.356  4990  5763 D CoexRfService: report RRC state:true
+05-14 15:28:53.425  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34406)(cct,lux,ir)[7444.15, 73.35, 59.676662](rgbc)[4336.04, 3498.34, 2376.81, 9128.74](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59597
+05-14 15:28:53.459  4990  7375 D ShortVideoApp-167-10201: transport layer data is invalid
+05-14 15:28:53.460  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:53.460  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:53.460  4990  7375 D ScorePolicy: handleScoreChanged: []
+05-14 15:28:53.520  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:53.520  1980  1980 D SensorFeature: write 39 bytes:746159451407302,746159462518413,59598,0
+05-14 15:28:53.548  1946 15903 W QC2Comp : [vp9D_157] Skipping empty output buffer
+05-14 15:28:53.612  1922 24762 I [UAH_CLIENT]: UahRelease, handle:311944
+05-14 15:28:53.615  1922 22674 I [UAH_CLIENT]: UahPlatformResAcquire
+05-14 15:28:53.615  1922 22674 I [UAH_CLIENT]: UahEventAcquire, cmdid:-3, pkg:1922 22674, identity:qcom-perfd
+05-14 15:28:53.618  1922  2093 E ANDR-PERF-UTIL: ANDR-PERF-UTIL: save_node_val() 366: Failed to read /sys/devices/system/cpu/cpu3/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-OPTSHANDLER: ANDR-PERF-OPTSHANDLER: modify_sysfsnode() 1095: Failed to read /sys/devices/system/cpu/cpu3/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-RESOURCEQS: ANDR-PERF-RESOURCEQS: AddAndApply() 167: Failed to apply optimization [5, 17]
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-UTIL: ANDR-PERF-UTIL: save_node_val() 366: Failed to read /sys/devices/system/cpu/cpu0/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-OPTSHANDLER: ANDR-PERF-OPTSHANDLER: modify_sysfsnode() 1095: Failed to read /sys/devices/system/cpu/cpu0/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-RESOURCEQS: ANDR-PERF-RESOURCEQS: AddAndApply() 167: Failed to apply optimization [5, 17]
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-UTIL: ANDR-PERF-UTIL: save_node_val() 366: Failed to read /sys/devices/system/cpu/cpu7/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-OPTSHANDLER: ANDR-PERF-OPTSHANDLER: modify_sysfsnode() 1095: Failed to read /sys/devices/system/cpu/cpu7/cpufreq/walt/pl
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-RESOURCEQS: ANDR-PERF-RESOURCEQS: AddAndApply() 167: Failed to apply optimization [5, 17]
+05-14 15:28:53.619  1922  2093 E ANDR-PERF-RESOURCEQS: ANDR-PERF-RESOURCEQS: AddAndApply() 125: Resource with major=16, minor=41 not supported
+05-14 15:28:53.640  3332  3821 D QmiClient: qmiServiceEventCallback recv msg id 47
+05-14 15:28:53.640  3332  3821 D QmiClient: enter -mServiceType 10 onQmiServiceEventCallback msgId 47
+05-14 15:28:53.640  3332  3821 D QmiClient: onQmiServiceEventCallback - enter. msgId=47
+05-14 15:28:53.640  3332  3375 D OttProxy: handleMessage msg is 3001
+05-14 15:28:53.641  4990  5848 D SubsysRadioIndication[1]: radioLinkLatencyInfoInd
+05-14 15:28:53.641  4990  5848 D SubsysRadioIndication[1]: notify enter
+05-14 15:28:53.642  4990  4990 D NetworkService[1]: handleMessage what:1008
+05-14 15:28:53.642  4990  4990 D NetworkService[1]: EVENT_REG_LINK_LATENCY_INFO_CHANGE ulLatency:19361
+05-14 15:28:53.664 12116 15900 W OplusFeedbackInfo: 0xb400007a2c552200 c2.qti.vp9.decoder codec[0xb400007a4ffe6800] 854x480 inputFps=26 outputFps=26 renderFps=25, discardFps=0
+05-14 15:28:53.688  1868 23867 I sensors-hal: handle_oplus_wise_rgb_event:189, high_pwm_light:lux 71.1,cct 7358.7,brl/algo/ir 1259.0/2.0/59.0,pwm/dc 0.0/0.0,rgbc 4450.753906/3596.197510/2441.190918/9391.037109,ts 746159423758530,cnt 34410,flag 59598
+05-14 15:28:53.688  1868 26641 I sensors-hal: handle_oplus_wise_rgb_event:160, wise_rgb:(34411)(cct,lux,ir)[7358.71, 71.07, 59.034393](rgbc)[4524.17, 3689.16, 2527.04, 9540.92](pwm,hbm,brl,algo)[0.0 0.0 1259.0 2.0],flag 59598
+05-14 15:28:53.726 16732 16781 D bt_shim_hci: [hci_layer.cc:235] transmit_command: Sending command LE_ENERGY_INFO(0xfd59)
+05-14 15:28:53.728  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_WAKE_IND: 0xFD
+05-14 15:28:53.728  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Writing IBS_WAKE_ACK
+05-14 15:28:53.730 16732 16791 D bt_shim_hci: [hci_layer.cc:196] OnTransmitPacketCommandComplete: Received cmd complete for LE_ENERGY_INFO(0xfd59)
+05-14 15:28:53.731 16732 16781 D bt_btm_pm: [btm_pm.cc:1009] BTM_PM_ReadBleScanDutyCycle: LE scan_window:256 scan interval:5120
+05-14 15:28:53.731 16732 16781 I bluetooth: [client.cc:1210] IsInStreaming: audio_sender_state_: IDLE, audio_receiver_state_: IDLE
+05-14 15:28:53.731 16732 16781 D bt_bta_dm: [bta_dm_act.cc:1751] bta_dm_obtain_system_context: active_acl_num 1 sniff_acl_num 0 le_acl_num 0 le_adv_num 0 le_scan_duty 5 inquiry false sco false a2dp true le_audio false ctrl_state 0x410001
+05-14 15:28:53.734 16732 23938 I OplusBluetoothSarManager: is same sar state, keep current sar value
+05-14 15:28:53.769  1853 16819 I vendor.qti.bluetooth@1.1-ibs_handler: ProcessIbsCmd: Received IBS_SLEEP_IND: 0xFE
+05-14 15:28:53.778  6172 12315 E oiface  : sched_setaffinity failed
+05-14 15:28:53.798  1980  1980 D SensorFeature: name=ssc_screenshot_info ,index = 22
+05-14 15:28:53.799  1980  1980 D SensorFeature: write 39 bytes:746159726154142,746159741185808,59599,0

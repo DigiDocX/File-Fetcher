@@ -13,7 +13,9 @@
       "bundleIdentifier": "com.profujjwal007.FRename"
     },
     "android": {
-      "permissions": ["MANAGE_EXTERNAL_STORAGE"],
+      "permissions": [
+        "MANAGE_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -34,7 +36,9 @@
       [
         "react-native-permissions",
         {
-          "permissions": ["MANAGE_EXTERNAL_STORAGE"]
+          "permissions": [
+            "MANAGE_EXTERNAL_STORAGE"
+          ]
         }
       ],
       [

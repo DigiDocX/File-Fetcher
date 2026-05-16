@@ -28,6 +28,7 @@
     "expo-intent-launcher": "~13.0.8",
     "expo-keep-awake": "~15.0.8",
     "expo-linking": "~8.0.11",
+    "expo-media-library": "~18.2.1",
     "expo-pdf-to-image": "^1.0.0",
     "expo-router": "~6.0.23",
     "expo-sharing": "~14.0.8",
