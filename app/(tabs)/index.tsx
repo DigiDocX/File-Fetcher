@@ -17,13 +17,14 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { discoverPDFs, type DiscoveredPdf } from '@/lib/media-query';
 
-type FilterKey = 'ALL' | 'PDF' | 'WORD' | 'EXCEL';
+type FilterKey = 'ALL' | 'PDF' | 'WORD' | 'EXCEL' | 'TXT';
 
 const FILTER_LABELS: Record<FilterKey, string> = {
   ALL: 'ALL',
   PDF: 'PDF',
   WORD: 'WORD',
   EXCEL: 'EXCEL',
+  TXT: 'TXT',
 };
 
 function getDocKind(item: DiscoveredPdf): FilterKey {
@@ -46,6 +47,10 @@ function getDocKind(item: DiscoveredPdf): FilterKey {
     name.endsWith('.xlsx')
   ) {
     return 'EXCEL';
+  }
+
+  if (mime === 'text/plain' || name.endsWith('.txt')) {
+    return 'TXT';
   }
 
   return 'ALL';
@@ -111,6 +116,7 @@ export default function HomeScreen() {
       PDF: 0,
       WORD: 0,
       EXCEL: 0,
+      TXT: 0,
     };
 
     for (const item of pdfs) {
