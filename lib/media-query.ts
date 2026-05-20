@@ -20,12 +20,6 @@ const { AceScannerModule } = NativeModules;
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-export type PdfStatus =
-  | 'Pending Local Processing...'
-  | 'Processing...'
-  | 'Processed'
-  | 'Failed';
-
 export type DiscoveredPdf = {
   /** MediaStore row ID (string) */
   id: string;
@@ -35,8 +29,8 @@ export type DiscoveredPdf = {
   path: string;
   /** Original display filename */
   name: string;
-  status: PdfStatus;
-  suggestedTitle: string | null;
+  /** MIME type reported by MediaStore */
+  mimeType?: string;
 };
 
 // ─── Permission helpers ───────────────────────────────────────────────────────
@@ -143,7 +137,7 @@ export async function discoverPDFs(): Promise<DiscoveredPdf[]> {
   }
 
   try {
-    const raw: Array<{ id: string; uri: string; filename: string }> =
+    const raw: Array<{ id: string; uri: string; filename: string; mimeType?: string }> =
       await AceScannerModule.discoverPDFsInstantly();
 
     return raw.map((item) => ({
@@ -151,8 +145,7 @@ export async function discoverPDFs(): Promise<DiscoveredPdf[]> {
       uri: item.uri,
       path: item.uri.replace('file://', ''),
       name: item.filename,
-      status: 'Pending Local Processing...' as PdfStatus,
-      suggestedTitle: null,
+      mimeType: item.mimeType,
     }));
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : 'Unknown error';

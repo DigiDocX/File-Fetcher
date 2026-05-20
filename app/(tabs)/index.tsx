@@ -1,14 +1,10 @@
 /**
  * app/(tabs)/index.tsx
  *
- * AceScanner — Three-phase PDF discovery & rename pipeline.
- *
- *  Phase 1 — Instant Discovery  : native MediaStore query via AceScannerModule
- *  Phase 2 — UI Isolation       : FlatList renders metadata immediately
- *  Phase 3 — NLP Queue          : sequential local on-device rename processing
+ * AceScanner — Instant document discovery.
  */
 
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import {
   ActivityIndicator,
   FlatList,
@@ -19,61 +15,62 @@ import {
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { discoverPDFs, type DiscoveredPdf, type PdfStatus } from '@/lib/media-query';
-import { runNlpRenameQueue, type NlpItemUpdate } from '@/lib/bulk-ocr';
+import { discoverPDFs, type DiscoveredPdf } from '@/lib/media-query';
 
-// ─── Helpers ──────────────────────────────────────────────────────────────────
+type FilterKey = 'ALL' | 'PDF' | 'WORD' | 'EXCEL';
 
-function getStatusColor(status: PdfStatus): string {
-  switch (status) {
-    case 'Processing...':              return '#F59E0B';
-    case 'Processed':                  return '#10B981';
-    case 'Failed':                     return '#EF4444';
-    case 'Pending Local Processing...':
-    default:                           return '#64748B';
+const FILTER_LABELS: Record<FilterKey, string> = {
+  ALL: 'ALL',
+  PDF: 'PDF',
+  WORD: 'WORD',
+  EXCEL: 'EXCEL',
+};
+
+function getDocKind(item: DiscoveredPdf): FilterKey {
+  const mime = (item.mimeType ?? '').toLowerCase();
+  const name = item.name.toLowerCase();
+
+  if (mime === 'application/pdf' || name.endsWith('.pdf')) return 'PDF';
+  if (
+    mime === 'application/msword' ||
+    mime === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' ||
+    name.endsWith('.doc') ||
+    name.endsWith('.docx')
+  ) {
+    return 'WORD';
   }
+  if (
+    mime === 'application/vnd.ms-excel' ||
+    mime === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' ||
+    name.endsWith('.xls') ||
+    name.endsWith('.xlsx')
+  ) {
+    return 'EXCEL';
+  }
+
+  return 'ALL';
 }
 
 // ─── List Item ────────────────────────────────────────────────────────────────
 
-type ListItemProps = { 
-  item: DiscoveredPdf; 
-  activeTab: 'Original' | 'Suggested';
+type ListItemProps = {
+  item: DiscoveredPdf;
 };
 
-function PdfListItem({ item, activeTab }: ListItemProps) {
-  const statusColor = getStatusColor(item.status);
-
+function PdfListItem({ item }: ListItemProps) {
   return (
     <View style={styles.card}>
-      {/* Row 1: filename + status badge */}
+      {/* Row 1: filename */}
       <View style={styles.cardHeader}>
         <Text style={styles.fileName} numberOfLines={1}>
           {item.name}
         </Text>
-        <View style={[styles.statusBadge, { borderColor: statusColor }]}>
-          <Text style={[styles.statusText, { color: statusColor }]}>
-            {item.status}
-          </Text>
-        </View>
       </View>
 
       {/* Row 2: physical path */}
       <Text style={styles.fileUri} numberOfLines={1}>
         {item.uri}
       </Text>
-
-      {/* Row 3: suggested rename target */}
-      {activeTab === 'Suggested' && (
-        <View style={styles.renameRow}>
-          <Text style={styles.renameLabel}>Suggested Rename Target</Text>
-          <View style={styles.renameActionRow}>
-            <Text style={styles.renameValue}>
-              {item.suggestedTitle ?? '—'}
-            </Text>
-          </View>
-        </View>
-      )}
     </View>
   );
 }
@@ -83,67 +80,58 @@ function PdfListItem({ item, activeTab }: ListItemProps) {
 export default function HomeScreen() {
   const [pdfs,        setPdfs]        = useState<DiscoveredPdf[]>([]);
   const [isScanning,  setIsScanning]  = useState(false);
-  const [isProcessing,setIsProcessing]= useState(false);
   const [elapsedMs,   setElapsedMs]   = useState<number | null>(null);
-  const [queueIndex,  setQueueIndex]  = useState(0);
-  const [activeTab,   setActiveTab]   = useState<'Original' | 'Suggested'>('Original');
-
-  // Stable ref so the NLP queue closure always reads the latest pdfs length
-  const pdfCountRef = useRef(0);
+  const [activeFilter, setActiveFilter] = useState<FilterKey>('ALL');
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   // ── Phase 1: Instant Discovery ─────────────────────────────────────────────
   const handleAceScan = useCallback(async () => {
-    if (isScanning || isProcessing) return;
+    if (isScanning) return;
 
     setIsScanning(true);
     setElapsedMs(null);
     setPdfs([]);
-    setQueueIndex(0);
 
     const t0 = Date.now();
     const discovered = await discoverPDFs();
     const elapsed = Date.now() - t0;
 
-    pdfCountRef.current = discovered.length;
-
     // ── Phase 2: Immediately render the metadata list ─────────────────────
     setPdfs(discovered);
     setElapsedMs(elapsed);
     setIsScanning(false);
-
-    if (discovered.length === 0) return;
-
-    // ── Phase 3: Kick off the sequential NLP queue ────────────────────────
-    setIsProcessing(true);
-
-    const onItemUpdate = (update: NlpItemUpdate) => {
-      setPdfs((prev) =>
-        prev.map((p) =>
-          p.id === update.id
-            ? { ...p, status: update.status, suggestedTitle: update.suggestedTitle }
-            : p
-        )
-      );
-      setQueueIndex((i) => i + 1);
-    };
-
-    await runNlpRenameQueue(discovered, onItemUpdate);
-    setIsProcessing(false);
-  }, [isScanning, isProcessing]);
+  }, [isScanning]);
 
   // ── Derived UI state ───────────────────────────────────────────────────────
   const totalCount   = pdfs.length;
-  const processedCount = pdfs.filter(
-    (p) => p.status === 'Processed' || p.status === 'Failed'
-  ).length;
 
+  const filterCounts = useMemo(() => {
+    const counts: Record<FilterKey, number> = {
+      ALL: pdfs.length,
+      PDF: 0,
+      WORD: 0,
+      EXCEL: 0,
+    };
+
+    for (const item of pdfs) {
+      const kind = getDocKind(item);
+      if (kind !== 'ALL') {
+        counts[kind] += 1;
+      }
+    }
+
+    return counts;
+  }, [pdfs]);
+
+  const filteredDocs = useMemo(() => {
+    if (activeFilter === 'ALL') return pdfs;
+    return pdfs.filter((item) => getDocKind(item) === activeFilter);
+  }, [pdfs, activeFilter]);
   const buttonLabel = isScanning
     ? 'Scanning…'
-    : isProcessing
-    ? `Processing ${processedCount}/${totalCount}`
     : 'Trigger Ace Scan';
 
-  const buttonDisabled = isScanning || isProcessing;
+  const buttonDisabled = isScanning;
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -151,40 +139,52 @@ export default function HomeScreen() {
 
         {/* ── Header ── */}
         <View style={styles.header}>
-          <Text style={styles.headerTitle}>AceScanner</Text>
+          <View style={styles.headerRow}>
+            <Text style={styles.headerTitle}>AceScanner</Text>
+            <View style={styles.filterWrap}>
+              <TouchableOpacity
+                style={styles.filterButton}
+                onPress={() => setIsFilterOpen((open) => !open)}
+                activeOpacity={0.8}
+              >
+                <Text style={styles.filterButtonText}>
+                  {FILTER_LABELS[activeFilter]} ({filterCounts[activeFilter]})
+                </Text>
+                <Text style={styles.filterChevron}>▾</Text>
+              </TouchableOpacity>
+
+              {isFilterOpen && (
+                <View style={styles.filterMenu}>
+                  {(Object.keys(FILTER_LABELS) as FilterKey[]).map((key) => (
+                    <TouchableOpacity
+                      key={key}
+                      style={styles.filterItem}
+                      onPress={() => {
+                        setActiveFilter(key);
+                        setIsFilterOpen(false);
+                      }}
+                    >
+                      <Text style={styles.filterItemText}>
+                        {FILTER_LABELS[key]} ({filterCounts[key]})
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </View>
+              )}
+            </View>
+          </View>
           {elapsedMs !== null && (
             <Text style={styles.headerSub}>
-              {totalCount} PDF{totalCount !== 1 ? 's' : ''} found in {elapsedMs} ms
+              {totalCount} document{totalCount !== 1 ? 's' : ''} found in {elapsedMs} ms
             </Text>
           )}
-          {isProcessing && (
-            <Text style={styles.headerSub}>
-              NLP queue: {processedCount}/{totalCount} processed
-            </Text>
-          )}
-        </View>
-
-        {/* ── Tabs ── */}
-        <View style={styles.tabsContainer}>
-          <TouchableOpacity
-            style={[styles.tab, activeTab === 'Original' && styles.activeTab]}
-            onPress={() => setActiveTab('Original')}
-          >
-            <Text style={[styles.tabText, activeTab === 'Original' && styles.activeTabText]}>Original Names</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.tab, activeTab === 'Suggested' && styles.activeTab]}
-            onPress={() => setActiveTab('Suggested')}
-          >
-            <Text style={[styles.tabText, activeTab === 'Suggested' && styles.activeTabText]}>Suggested Names</Text>
-          </TouchableOpacity>
         </View>
 
         {/* ── PDF List — Phase 2 ── */}
         <FlatList
-          data={activeTab === 'Original' ? pdfs : pdfs.filter(p => p.suggestedTitle || p.status === 'Processing...' || p.status === 'Failed')}
+          data={filteredDocs}
           keyExtractor={(item) => item.id}
-          renderItem={({ item }) => <PdfListItem item={item} activeTab={activeTab} />}
+          renderItem={({ item }) => <PdfListItem item={item} />}
           contentContainerStyle={styles.listContent}
           initialNumToRender={10}
           maxToRenderPerBatch={10}
@@ -192,7 +192,7 @@ export default function HomeScreen() {
           ListEmptyComponent={
             isScanning ? null : (
               <Text style={styles.emptyText}>
-                No PDFs discovered yet.{'\n'}Tap "Trigger Ace Scan" to begin.
+                No documents discovered yet.{'\n'}Tap "Trigger Ace Scan" to begin.
               </Text>
             )
           }
@@ -205,7 +205,7 @@ export default function HomeScreen() {
           disabled={buttonDisabled}
           activeOpacity={0.8}
         >
-          {(isScanning || isProcessing) && (
+          {isScanning && (
             <ActivityIndicator
               color="#fff"
               size="small"
@@ -237,6 +237,12 @@ const styles = StyleSheet.create({
   header: {
     gap: 4,
   },
+  headerRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 12,
+  },
   headerTitle: {
     color: '#F8FAFC',
     fontSize: 22,
@@ -247,31 +253,55 @@ const styles = StyleSheet.create({
     color: '#94A3B8',
     fontSize: 13,
   },
-
-  // ── Tabs
-  tabsContainer: {
+  filterWrap: {
+    position: 'relative',
+    alignItems: 'flex-end',
+  },
+  filterButton: {
     flexDirection: 'row',
-    backgroundColor: '#0F172A',
-    borderRadius: 8,
-    padding: 4,
-    marginBottom: 8,
-  },
-  tab: {
-    flex: 1,
-    paddingVertical: 10,
     alignItems: 'center',
-    borderRadius: 6,
+    gap: 6,
+    backgroundColor: '#0F172A',
+    borderColor: '#1E293B',
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 6,
+    borderRadius: 10,
   },
-  activeTab: {
-    backgroundColor: '#1E293B',
-  },
-  tabText: {
-    color: '#94A3B8',
-    fontSize: 14,
+  filterButtonText: {
+    color: '#E2E8F0',
+    fontSize: 12,
     fontWeight: '600',
   },
-  activeTabText: {
-    color: '#F8FAFC',
+  filterChevron: {
+    color: '#94A3B8',
+    fontSize: 12,
+  },
+  filterMenu: {
+    position: 'absolute',
+    top: 36,
+    right: 0,
+    backgroundColor: '#0F172A',
+    borderColor: '#1E293B',
+    borderWidth: 1,
+    borderRadius: 12,
+    paddingVertical: 6,
+    minWidth: 160,
+    zIndex: 20,
+    elevation: 6,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.25,
+    shadowRadius: 10,
+  },
+  filterItem: {
+    paddingVertical: 8,
+    paddingHorizontal: 12,
+  },
+  filterItemText: {
+    color: '#E2E8F0',
+    fontSize: 13,
+    fontWeight: '600',
   },
 
   // ── List
@@ -312,41 +342,6 @@ const styles = StyleSheet.create({
   fileUri: {
     color: '#64748B',
     fontSize: 11,
-  },
-  statusBadge: {
-    borderWidth: 1,
-    borderRadius: 999,
-    paddingHorizontal: 10,
-    paddingVertical: 3,
-  },
-  statusText: {
-    fontSize: 11,
-    fontWeight: '600',
-  },
-  renameRow: {
-    marginTop: 8,
-    paddingTop: 8,
-    borderTopWidth: 1,
-    borderTopColor: '#1E293B',
-    gap: 4,
-  },
-  renameLabel: {
-    color: '#94A3B8',
-    fontSize: 11,
-    fontWeight: '600',
-  },
-  renameActionRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: 8,
-  },
-  renameValue: {
-    color: '#60A5FA',
-    fontSize: 13,
-    fontWeight: '500',
-    flex: 1,
-    textAlign: 'right',
   },
 
   // ── Button
